@@ -1,6 +1,8 @@
 import os
 from keep_alive import keep_alive
 from discord.ext import commands
+import random
+
 
 token = os.environ['TOKEN']
 
@@ -28,11 +30,6 @@ async def test2(ctx, arg1, arg2):
 async def add(ctx, a: int, b: int):
     await ctx.send(a + b)
 
-#class discord.Member
-
-@bot.command()
-async def joined(ctx, *, member: discord.Member):
-    await ctx.send('{0} joined on {0.joined_at}'.format(member))
 
 
 extensions = [
